@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/bruno.vasconcellos/projects/github-remix/app/routes/github.$username.tsx?browser", "../../../app/routes/github.$username.tsx"],
+  "sourcesContent": ["export * from \"/home/bruno.vasconcellos/projects/github-remix/app/routes/github.$username.tsx\";", "import { LoaderFunction } from \"@remix-run/server-runtime\";\n\nexport const loader: LoaderFunction = async ({params}) => {\n    return {\n        user: params.username\n    }\n}"],
+  "mappings": ";;;;;AAAA;;;ACAA;AAEO,IAAM,SAAyB,OAAO,EAAC,aAAY;AACtD,SAAO;AAAA,IACH,MAAM,OAAO;AAAA;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/bruno.vasconcellos/projects/github-remix/app/routes/github.$username.tsx?browser"],
+  "sourcesContent": ["export * from \"/home/bruno.vasconcellos/projects/github-remix/app/routes/github.$username.tsx\";"],
+  "mappings": ";;;;;AAAA;",
+  "names": []
+}

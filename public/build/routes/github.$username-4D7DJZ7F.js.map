@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/bruno.vasconcellos/projects/github-remix/app/routes/github.$username.tsx?browser", "../../../app/routes/github.$username.tsx"],
+  "sourcesContent": ["export { default } from \"/home/bruno.vasconcellos/projects/github-remix/app/routes/github.$username.tsx\";", "import { LoaderFunction, useLoaderData } from \"remix\";\n\nexport interface User {\n    login: string\n    avatar_url: string\n    html_url: string\n    bio: string\n}\n\nexport interface LoaderData {\n    user: User\n}\n\nexport const loader: LoaderFunction = async ({params}) => {\n    const res = await fetch(`https://api.github.com/users/${params.username}`, {\n        headers: {\n            accept: 'application/vnd.github.v3+json',\n            Authorization: `token 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`\n        }\n    })\n\n    return {\n        user: await res.json()\n    }\n}\n\nexport default function() {\n    const { user } = useLoaderData()\n    return (\n        <>\n            <h1>{user.login}</h1>\n            <blockquote>{user.bio}</blockquote>\n            <img src={user.avatar_url} alt={user.login} width=\"150\" />\n        </>\n    )\n}\n\n"],
+  "mappings": ";;;;;;;;;AAAA;;;ACAA;AA0Be,mCAAW;AACtB,QAAM,EAAE,SAAS;AACjB,SACI,0DACI,oCAAC,MAAD,MAAK,KAAK,QACV,oCAAC,cAAD,MAAa,KAAK,MAClB,oCAAC,OAAD;AAAA,IAAK,KAAK,KAAK;AAAA,IAAY,KAAK,KAAK;AAAA,IAAO,OAAM;AAAA;AAAA;",
+  "names": []
+}
