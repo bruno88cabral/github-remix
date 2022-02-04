@@ -1,4 +1,5 @@
 import { LoaderFunction, useLoaderData } from "remix";
+import { GithubApi, GithubContainer, Repo } from "~/features/github";
 
 export interface User {
     login: string
@@ -8,25 +9,18 @@ export interface User {
 }
 
 export interface LoaderData {
-    user: User
+    user: User,
+    repos: Repo
 }
 
 export const loader: LoaderFunction = async ({params}) => {
-    const res = await fetch(`https://api.github.com/users/${params.username}`)
-
     return {
-        user: await res.json()
+        user: await GithubApi.getGithubUser(params.username),
+        repos: await GithubApi.getUserRepos(params.username)
     }
 }
 
 export default function() {
-    const { user } = useLoaderData()
-    return (
-        <>
-            <h1>{user.login}</h1>
-            <blockquote>{user.bio}</blockquote>
-            <img src={user.avatar_url} alt={user.login} width="150" />
-        </>
-    )
+    const { user, repos } = useLoaderData()
+    return <GithubContainer user={user} />
 }
-

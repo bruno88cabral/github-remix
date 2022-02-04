@@ -1,5 +1,5 @@
 {
-  "version": "95b47095",
+  "version": "a76c16fc",
   "entry": {
     "module": "/build/entry.client-YG3EIVZA.js",
     "imports": [
@@ -21,7 +21,20 @@
       "id": "routes/github.$username",
       "parentId": "root",
       "path": "github/:username",
-      "module": "/build/routes/github.$username-56QPYRHL.js",
+      "module": "/build/routes/github.$username-JOXP6NEY.js",
+      "imports": [
+        "/build/_shared/chunk-TLKKSHYV.js"
+      ],
+      "hasAction": false,
+      "hasLoader": true,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/github.$username/$repoName": {
+      "id": "routes/github.$username/$repoName",
+      "parentId": "routes/github.$username",
+      "path": ":repoName",
+      "module": "/build/routes/github.$username/$repoName-AM2XRCR7.js",
       "hasAction": false,
       "hasLoader": true,
       "hasCatchBoundary": false,
@@ -38,5 +51,5 @@
       "hasErrorBoundary": false
     }
   },
-  "url": "/build/manifest-95B47095.js"
+  "url": "/build/manifest-A76C16FC.js"
 }
