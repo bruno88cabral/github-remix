@@ -1,9 +1,9 @@
 {
-  "version": "a76c16fc",
+  "version": "45533ef7",
   "entry": {
-    "module": "/build/entry.client-YG3EIVZA.js",
+    "module": "/build/entry.client-VNCDKMCQ.js",
     "imports": [
-      "/build/_shared/chunk-6NDA4BXL.js",
+      "/build/_shared/chunk-EWECYDFC.js",
       "/build/_shared/chunk-E7VMOUYL.js"
     ]
   },
@@ -11,7 +11,7 @@
     "root": {
       "id": "root",
       "path": "",
-      "module": "/build/root-6OEBGVGM.js",
+      "module": "/build/root-FGKBFW3T.js",
       "hasAction": false,
       "hasLoader": false,
       "hasCatchBoundary": false,
@@ -21,7 +21,7 @@
       "id": "routes/github.$username",
       "parentId": "root",
       "path": "github/:username",
-      "module": "/build/routes/github.$username-JOXP6NEY.js",
+      "module": "/build/routes/github.$username-UA3CSIEG.js",
       "imports": [
         "/build/_shared/chunk-TLKKSHYV.js"
       ],
@@ -51,5 +51,5 @@
       "hasErrorBoundary": false
     }
   },
-  "url": "/build/manifest-A76C16FC.js"
+  "url": "/build/manifest-45533EF7.js"
 }

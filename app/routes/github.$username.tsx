@@ -22,5 +22,5 @@ export const loader: LoaderFunction = async ({params}) => {
 
 export default function() {
     const { user, repos } = useLoaderData()
-    return <GithubContainer user={user} />
+    return <GithubContainer user={user} repos={repos} />
 }
